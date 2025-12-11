@@ -3,6 +3,8 @@
 L’objectif était de construire une pipeline complète partant d’une base OLTP dans PostgreSQL, puis d’orchestrer son ingestion vers un Data Lake (ADLS2) via Azure Data Factory, de la transformer dans Azure Synapse Analytics, et enfin de la visualiser dans Power BI.
 Avant d’entrer dans le pipeline, j’ai dû créer et configurer plusieurs services Azure.
 
+Azure Data Factory 🔄 PostgreSQL ➡️ ADLS Gen2 ➡️ Azure Synapse Analytics ➡️ Power BI
+
 ### J'ai utilisé le service Azure Database for PostgreSQL – Flexible Server, donc créé un serveur PostgreSQL managé. Pourquoi ? Pas besoin d’une VM : Azure gère tout
 Pour cela, j’ai autorisé mon adresse IP à accéder au serveur, puis installé psql et configuré les variables d’environnement afin de me connecter depuis mon terminal local.
 Ainsi j’ai pu créer la base OLTP qui sert de point de départ au pipeline.
